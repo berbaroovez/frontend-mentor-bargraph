@@ -20,7 +20,10 @@ export default function Home() {
     <BalanceZone>
       <BalanceTitle>My Balance </BalanceTitle>
       <BalanceValue>$420.69</BalanceValue>
-      <BalanceImg/>
+      <BalanceCircles>
+        <BalanceCircleOutline/>
+        <BalanceCircle/>
+      </BalanceCircles>
     </BalanceZone>
     <SpendingZone>
       <SpendingTitle>Spending - Last 7 days</SpendingTitle>
@@ -65,6 +68,7 @@ const ChartZone = styled.div`
   gap:16px;
 `
 const BalanceZone = styled.div`
+position: relative;
 background-color: hsl(10, 79%, 65%);
 width: 100%;
 height: 100px;
@@ -144,3 +148,28 @@ right: 0;
 `
 const PercentValue = styled.p`  color: hsl(25, 47%, 15%); font-weight: bold; text-align: right;`
 const PercentTitle = styled.p` color:hsl(28, 10%, 53%); font-size: 16px;`
+
+
+const BalanceCircle = styled.div`
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: hsl(25, 47%, 15%);
+  margin-left: -20px;
+`
+const BalanceCircleOutline = styled.div`
+position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  
+  border: 2px solid white;
+
+`
+const BalanceCircles = styled.div`
+position: absolute;
+right:20px;
+display: flex;
+
+  
+`
